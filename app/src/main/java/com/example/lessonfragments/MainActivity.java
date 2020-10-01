@@ -7,10 +7,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements IFragments {
+public class MainActivity extends AppCompatActivity implements IFragments, FragmentActions {
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     private Fragment fragment1;
+    Fragment textFragment;
+    Fragment changeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements IFragments {
                 .commit();
     }
 
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -37,5 +40,22 @@ public class MainActivity extends AppCompatActivity implements IFragments {
             fragmentTransaction.remove(fragment1);
             fragmentTransaction.commit();
         }
+    }
+
+    @Override
+    public void replaceFragment() {
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        textFragment = new textFragment();
+        fragmentTransaction.replace(R.id.fragmentWebView,textFragment);
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void hideFragment() {
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.remove(textFragment);
+        fragmentTransaction.commit();
     }
 }

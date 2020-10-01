@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@android:color/holo_orange_light"
     tools:context=".changeFragment"
     android:orientation="vertical">
 
@@ -16,8 +16,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/text_ololo"
         android:layout_gravity="center"
-        android:textSize="18sp"
-        android:text="Ccылки" />
+        android:textSize="25sp"
+        android:text="Ccылки"
+        android:textColor="@android:color/holo_green_dark" />
 
 
     <androidx.recyclerview.widget.RecyclerView

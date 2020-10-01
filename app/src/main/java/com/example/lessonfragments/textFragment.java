@@ -14,9 +14,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class textFragment extends Fragment {
+    FragmentActions fragmentActions;
     IFragments iFragments;
-    private EditText etUrl;
-    private Button btnSearch;
+    private Button btnReplace;
+    private Button btnHide;
 
     public textFragment() {
         // Required empty public constructor
@@ -26,6 +27,7 @@ public class textFragment extends Fragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         iFragments = (IFragments) context;
+        fragmentActions = (FragmentActions) context;
     }
 
 
@@ -34,8 +36,20 @@ public class textFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_text, container, false);
-        btnSearch  = v.findViewById(R.id.btn_search);
-        etUrl = v.findViewById(R.id.etUrl);
+        btnReplace  = v.findViewById(R.id.btn_replace);
+        btnHide = v.findViewById(R.id.btn_hide);
+        btnReplace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentActions.replaceFragment();
+            }
+        });
+        btnHide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentActions.hideFragment();
+            }
+        });
 
         return v;
     }
