@@ -4,21 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_orange_light"
-    tools:context=".changeFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".changeFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
     <TextView
-        android:fontFamily="casual"
+        android:id="@+id/text_ololo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text_ololo"
         android:layout_gravity="center"
-        android:textSize="25sp"
+        android:fontFamily="casual"
         android:text="Ccылки"
-        android:textColor="@android:color/holo_green_dark" />
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="25sp" />
 
 
     <androidx.recyclerview.widget.RecyclerView

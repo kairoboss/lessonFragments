@@ -43,19 +43,19 @@ public class MainActivity extends AppCompatActivity implements IFragments, Fragm
     }
 
     @Override
-    public void replaceFragment() {
-        fragmentManager = getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        textFragment = new textFragment();
-        fragmentTransaction.replace(R.id.fragmentWebView,textFragment);
-        fragmentTransaction.commit();
-    }
-
-    @Override
     public void hideFragment() {
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.remove(textFragment);
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void replaceFragment() {
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        textFragment = new textFragment();
+        fragmentTransaction.replace(R.id.fragmentWebView, textFragment);
         fragmentTransaction.commit();
     }
 }

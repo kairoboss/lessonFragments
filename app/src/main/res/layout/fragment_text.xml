@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@android:color/holo_blue_bright"
+    android:orientation="vertical"
     tools:context=".textFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,19 +13,19 @@
         android:id="@+id/btn_replace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="replace 3 fragment"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:background="@android:color/holo_green_light"/>
+        android:background="@android:color/holo_green_light"
+        android:text="replace 3 fragment" />
 
     <Button
         android:id="@+id/btn_hide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hide 3 fragment"
         android:layout_gravity="right"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:background="@android:color/holo_green_light"/>
+        android:background="@android:color/holo_green_light"
+        android:text="hide 3 fragment" />
 
 </FrameLayout>

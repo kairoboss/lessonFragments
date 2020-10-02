@@ -36,7 +36,7 @@ public class textFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_text, container, false);
-        btnReplace  = v.findViewById(R.id.btn_replace);
+        btnReplace = v.findViewById(R.id.btn_replace);
         btnHide = v.findViewById(R.id.btn_hide);
         btnReplace.setOnClickListener(new View.OnClickListener() {
             @Override

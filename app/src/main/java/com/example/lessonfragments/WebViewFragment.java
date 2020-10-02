@@ -18,6 +18,7 @@ public class WebViewFragment extends Fragment {
     IFragments iFragments;
     WebView webView;
     String url;
+
     public WebViewFragment(String url) {
         this.url = url;
     }
@@ -38,11 +39,11 @@ public class WebViewFragment extends Fragment {
         return v;
     }
 
-    public void showWebView(final String url){
+    public void showWebView(final String url) {
         webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl(url);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
